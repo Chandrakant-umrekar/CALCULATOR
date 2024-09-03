@@ -1,0 +1,127 @@
+/* General styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    background-color: #34495e;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.inp-container {
+    display: flex;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bdc3c7;
+}
+
+button:nth-child(15) { 
+    background-color: #3498db;
+    color: white;
+}
+
+button:nth-child(15):hover {
+    background-color: #2980b9;
+}
+
+/* Special buttons */
+
+input {
+    width: 100%;
+}
+
+.delBtn {
+    width: 20%;
+}
+
+button:nth-child(4n) {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:nth-child(4n):hover {
+    background-color: #c0392b;
+}
+
+button:nth-child(16) {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:nth-child(16):hover {
+    background-color: #c0392b;
+}
+
+
+
+@media (max-width: 480px) {
+    .display {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .display {
+        height: 45px;
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+}
